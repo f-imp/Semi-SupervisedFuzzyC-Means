@@ -196,7 +196,7 @@ def ssfcm_v2(X, number_of_clusters, fuzziness_coefficient, b, F, alpha, max_iter
         cont += 1
     end = time.time()
     eta = np.round(end - start, decimals=5)
-    print("Time elapsed: {} [sec]".format(eta))
+    #print("Time elapsed: {} [sec]".format(eta))
     # print("#Iterations:\t", cont - 1, "\t\tObj Func value:\t", obj_functions[-1] - obj_functions[-2])
     # -------------------- DEBUGGING LOGS --------------------
     # print("Check sum of rows of partition matrix:\n")

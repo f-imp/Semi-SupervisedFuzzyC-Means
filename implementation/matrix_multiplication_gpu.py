@@ -176,8 +176,8 @@ def evaluate_objective_functions_new_cp(data, centroids, partition_matrix, fuzzy
 
 
 def ssfcm_v3(X, number_of_clusters, fuzziness_coefficient, b, F, alpha, max_iter=100,
-                 stop_condition=('obj_delta', 0.001),
-                 init=None, distance='euclidean'):
+             stop_condition=('obj_delta', 0.001),
+             init=None, distance='euclidean'):
     start = time.time()
     cardinality_samples = cp.shape(X)[0]
     number_features = cp.shape(X)[1]
@@ -198,7 +198,7 @@ def ssfcm_v3(X, number_of_clusters, fuzziness_coefficient, b, F, alpha, max_iter
         cont += 1
     end = time.time()
     eta = np.round(end - start, decimals=5)
-    print("Time elapsed: {} [sec]".format(eta))
+    # print("Time elapsed: {} [sec]".format(eta))
     # print("#Iterations:\t", cont - 1, "\t\tObj Func value:\t", obj_functions[-1] - obj_functions[-2])
     # -------------------- DEBUGGING LOGS --------------------
     # print("Check sum of rows of partition matrix:\n")
