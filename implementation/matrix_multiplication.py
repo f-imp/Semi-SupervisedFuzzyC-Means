@@ -174,7 +174,7 @@ def evaluate_objective_functions_new(data, centroids, partition_matrix, fuzzy_va
     return J
 
 
-def ssfcm_new(X, number_of_clusters, fuzziness_coefficient, b, F, alpha, max_iter=100,
+def ssfcm_v2(X, number_of_clusters, fuzziness_coefficient, b, F, alpha, max_iter=100,
               stop_condition=('obj_delta', 0.001),
               init=None, distance='euclidean'):
     start = time.time()

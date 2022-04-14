@@ -87,7 +87,7 @@ def evaluate_objective_functions(data, centroid, partition_matrix, fuzzy_value, 
     return J
 
 
-def ssfcm(X, number_of_clusters, fuzziness_coefficient, b, F, alpha, max_iter=100,
+def ssfcm_v1(X, number_of_clusters, fuzziness_coefficient, b, F, alpha, max_iter=100,
           stop_condition=('obj_delta', 0.001),
           init=None, distance='euclidean'):
     start = time.time()
