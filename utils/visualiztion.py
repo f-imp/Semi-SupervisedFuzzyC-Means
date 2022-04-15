@@ -4,6 +4,13 @@ import matplotlib.cm as cm
 import numpy as np
 
 
+def legend_without_duplicate_labels(ax):
+    handles, labels = ax.get_legend_handles_labels()
+    unique = [(h, l) for i, (h, l) in enumerate(zip(handles, labels)) if l not in labels[:i]]
+    unique.sort(key=lambda y: y[1])
+    ax.legend(*zip(*unique))
+
+
 def plot_embedding(X, y, filepath, c, n, title=None):
     colors = cm.rainbow(np.linspace(0, 1, num=c))
     fig = plt.figure(n, figsize=(6, 6))
@@ -12,9 +19,8 @@ def plot_embedding(X, y, filepath, c, n, title=None):
     X = (X - x_min) / (x_max - x_min)
     ax.set_facecolor("white")
     for i in range(X.shape[0]):
-        ax.text(X[i, 0], X[i, 1], str(y[i]),
-                color=colors[y[i]],
-                fontdict={'weight': 'bold', 'size': 12})
+        plt.scatter(x=X[i, 0], y=X[i, 1], s=15, color=colors[y[i]], label=y[i])
+    legend_without_duplicate_labels(ax)
     ax.set_title(title)
     ax.title.set_position([.5, 1.1])
     ax.title.set_fontsize(14)
