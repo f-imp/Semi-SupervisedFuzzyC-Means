@@ -62,3 +62,21 @@ def create_dataset_partially_labelled_new(X, y, percentage, random_seed):
                                                                                                        alpha))
 
     return np.array(new_X).astype('float32'), np.array(new_y).astype('int'), alpha, cont_labelled
+
+
+def create_clustering(X, U):
+    number_of_samples = np.shape(U)[0]
+    number_of_clusters = np.shape(U)[1]
+    number_of_features = np.shape(X)[1]
+
+    clusters = {}
+    y_pred = []
+    for index_cluster in range(number_of_clusters):
+        clusters[index_cluster] = np.zeros(shape=(0, number_of_features))
+
+    for s in range(number_of_samples):
+        index = np.where(U[s] == np.max(U[s]))[0][0]
+        y_pred.append(index)
+        clusters[index] = np.append(clusters[index], np.array(X[s:s + 1, :]), axis=0)
+
+    return clusters, np.asarray(a=y_pred)
