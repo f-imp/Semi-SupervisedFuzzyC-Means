@@ -1,4 +1,4 @@
-,version,n_samples,n_features,n_clusters,time
+,version,n_samples,n_features,n_clusters,time [s]
 0,for-loops (v1),100,10,3,0.82216
 1,matrix (v2),100,10,3,0.00893
 2,matrix GPU(v3),100,10,3,9.53604
