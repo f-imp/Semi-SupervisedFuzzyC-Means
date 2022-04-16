@@ -38,7 +38,7 @@ $ python Semi-SupervisedFuzzyC-Means/main.py
 Using the notebook file available at the following link:
 
 ```sh
-scrivere quì
+https://drive.google.com/file/d/1rsKU-c-zb3_-M8cBNJMpbU9Qh_NAuTaQ/view?usp=sharing
 ```
 ## Results
 ### Comparison among all 3 algorithms
