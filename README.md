@@ -37,7 +37,7 @@ It has been used different parameters to perform the experiments with a supervis
 |#features|10, 100, 500|
 |#clusters| 3, 5, 10|
 
-### Locally
+### Local Execution
 ```sh
 $ python Semi-SupervisedFuzzyC-Means/main.py
 ```
