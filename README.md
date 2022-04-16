@@ -29,6 +29,14 @@ These are the libraries/packages that must be install within your python environ
 ## Usage
 To perform the experiments locally it is necessary to have a GPU (with CUDA installed) or it could be used a Colab runtime with the hardware accelleration 
 
+### Setup 
+It has been used different parameters to perform the experiments with a supervision of 20% of the total number of samples:
+| Parameters | Value |
+| :----- | :- |
+|#samples |100, 1000, 10000|
+|#features|10, 100, 500|
+|#clusters| 3, 5, 10|
+
 ### Locally
 ```sh
 $ python Semi-SupervisedFuzzyC-Means/main.py
